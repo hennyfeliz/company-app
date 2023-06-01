@@ -7,9 +7,9 @@ import java.util.Optional;
 
 public interface CompanyRepositoryPort {
 
-  Company save(Company Company);
+  Company save(Company company);
   Optional<Company> findById(Long id);
   List<Company> findAll();
-  Optional<Company> update(Company Company);
+  Optional<Company> update(Company company);
   boolean deleteById(Long id);
 }
