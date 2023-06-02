@@ -1,6 +1,7 @@
 package com.company.domain.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Employee {
   private Long id;
@@ -10,11 +11,11 @@ public class Employee {
   private int position;
   private int team;
 
-  public Employee(Long id, String employeeName, String employeeLastname, LocalDate contratationDate, int position, int team) {
+  public Employee(Long id, String employeeName, String employeeLastname, LocalDateTime contratationDate, int position, int team) {
     this.id = id;
     this.employeeName = employeeName;
     this.employeeLastname = employeeLastname;
-    this.contratationDate = contratationDate;
+    this.contratationDate = LocalDate.from(contratationDate);
     this.position = position;
     this.team = team;
   }
