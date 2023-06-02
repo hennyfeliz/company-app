@@ -19,7 +19,7 @@ public class EmployeeEntity {
 
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Id
-  @Column(name = "employee_id")
+  @Column(name = "id")
   private Long id;
 
   @Column(name = "employee_name")
@@ -35,7 +35,7 @@ public class EmployeeEntity {
   private int team;
 
   public static EmployeeEntity fromDomainModel(Employee employee){
-    return new EmployeeEntity(employee.getId(), employee.getEmployeeName(), employee.getEmployeeLastname(), employee.getContratationDate().atStartOfDay(), employee.getPosition(), employee.getTeam());
+    return new EmployeeEntity(employee.getId(), employee.getEmployeeName(), employee.getEmployeeLastname(), employee.getContratationDate(), employee.getPosition(), employee.getTeam());
   }
 
   public Employee toDomainModel(){

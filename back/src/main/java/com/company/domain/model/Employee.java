@@ -7,7 +7,7 @@ public class Employee {
   private Long id;
   private String employeeName;
   private String employeeLastname;
-  private LocalDate contratationDate;
+  private LocalDateTime contratationDate;
   private int position;
   private int team;
 
@@ -15,7 +15,7 @@ public class Employee {
     this.id = id;
     this.employeeName = employeeName;
     this.employeeLastname = employeeLastname;
-    this.contratationDate = LocalDate.from(contratationDate);
+    this.contratationDate = contratationDate;
     this.position = position;
     this.team = team;
   }
@@ -44,11 +44,11 @@ public class Employee {
     this.employeeLastname = employeeLastname;
   }
 
-  public LocalDate getContratationDate() {
+  public LocalDateTime getContratationDate() {
     return contratationDate;
   }
 
-  public void setContratationDate(LocalDate contratationDate) {
+  public void setContratationDate(LocalDateTime contratationDate) {
     this.contratationDate = contratationDate;
   }
 
