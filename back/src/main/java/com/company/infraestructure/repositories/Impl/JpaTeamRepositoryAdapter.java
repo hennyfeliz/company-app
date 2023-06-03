@@ -46,6 +46,7 @@ public class JpaTeamRepositoryAdapter implements TeamRepositoryPort {
       TeamEntity updatedEntity = jpaTeamRepository.save(teamEntity);
       return Optional.of(updatedEntity.toDomainModel());
     }
+    return Optional.empty();
   }
 
   @Override
