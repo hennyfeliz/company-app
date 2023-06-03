@@ -1,0 +1,8 @@
+
+
+
+.footer{
+  background-color: rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  max-width: 1280px;
+}
