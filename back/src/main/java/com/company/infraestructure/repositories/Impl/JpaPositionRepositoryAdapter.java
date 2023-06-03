@@ -4,6 +4,7 @@ import com.company.domain.model.Position;
 import com.company.domain.ports.out.PositionReporitoryPort;
 import com.company.infraestructure.entities.PositionEntity;
 import com.company.infraestructure.repositories.JpaPositionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
