@@ -1,14 +1,15 @@
 package com.company.domain.model;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class Company {
   private Long id;
   private String companyName;
   private LocalDateTime creationDate;
-  private String employee;
+  private List<Employee> employee;
 
-  public Company(Long id, String companyName, LocalDateTime creationDate, String employee) {
+  public Company(Long id, String companyName, LocalDateTime creationDate, List<Employee> employee) {
     this.id = id;
     this.companyName = companyName;
     this.creationDate = creationDate;
@@ -39,11 +40,11 @@ public class Company {
     this.creationDate = creationDate;
   }
 
-  public String getEmployee() {
+  public List<Employee> getEmployee() {
     return employee;
   }
 
-  public void setEmployee(String employee) {
+  public void setEmployee(List<Employee> employee) {
     this.employee = employee;
   }
 }
