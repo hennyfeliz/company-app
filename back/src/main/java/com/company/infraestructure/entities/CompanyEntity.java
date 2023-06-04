@@ -1,7 +1,6 @@
 package com.company.infraestructure.entities;
 
 import com.company.domain.model.Company;
-import com.company.domain.model.Employee;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +8,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Table(name = "company_")
@@ -31,8 +29,8 @@ public class CompanyEntity {
   @Column(name = "creation_date")
   private LocalDateTime creationDate;
 
-  @OneToMany(mappedBy = "employee")
-  private List<Employee> employee;
+  @Column(length = 50)
+  private String employee;
 
   public static CompanyEntity fromDomainModel(Company company){
     return new CompanyEntity(company.getId(), company.getCompanyName(), company.getCreationDate(), company.getEmployee());
