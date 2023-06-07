@@ -6,6 +6,10 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <div className="container2">
+      <div className="background-div ">
+        <App />
+      </div>
+    </div>
   </React.StrictMode>,
 )
