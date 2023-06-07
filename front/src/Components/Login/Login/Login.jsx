@@ -1,87 +1,35 @@
-import { Form, Button, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import "./Login.css"
+import image from "./avatar.png"
 
 const Login = () => {
   return (
     <>
-    <Card>
-    <div className="w-75 container">
-      <h1 className="t-body-styles">Creando nuevo participante</h1>
-      <Form className="t-body-styles">
-        {/* CEDULA */}
-        <Form.Group className="mb-3" controlId="cedula">
-          <Form.Label>Cedula del participante</Form.Label>
-          <Form.Control
-            type="text"
-            // ref={post_cedula}
-            placeholder="Introduzca la cedula del participante"
-          />
-        </Form.Group>
-        {/* NOMBRE */}
-        <Form.Group className="mb-3" controlId="nombre">
-          <Form.Label>Nombre</Form.Label>
-          <Form.Control
-            type="text"
-            // ref={post_nombre}
-            placeholder="Introduzca el nombre del participante"
-          />
-        </Form.Group>
+      <Card classNameName="m-5">
+        <div className="w-75 container">
+          <div className="login">
+            <div className="avatar">
+              <img src={image} />
+            </div>
+            <h2>Login</h2>
+            <h3>Welcome back Kelly</h3>
 
-        {/* APELLIDO */}
-        <Form.Group className="mb-3" controlId="apellido">
-          <Form.Label>Apellido</Form.Label>
-          <Form.Control
-            type="text"
-            // ref={post_apellido}
-            placeholder="Introduzca el apellido del participante"
-          />
-        </Form.Group>
-
-        {/* CODIGO DEL CURSO */}
-        <Form.Label>Curso</Form.Label>
-        <div className="App">
-          <div className="form-group">
-            {/* <Form.Select ref={post_curso}>
-              {cursos.map((curso) => {
-                return (
-                  <option key={curso.codigoCurso} value={curso.codigoCurso}>
-                    {`${curso.codigoCurso} - ${curso.descripcion}`}
-                  </option>
-                );
-              })}
-            </Form.Select> */}
+            <form className="login-form">
+              <div className="textbox">
+                <input type="email" placeholder="Username" />
+                <span className="material-symbols-outlined">  </span>
+              </div>
+              <div className="textbox">
+                <input type="password" placeholder="Password" />
+                <span className="material-symbols-outlined">  </span>
+              </div>
+              <button type="submit">LOGIN</button>
+              <a href="#">Forgot your credentials?</a>
+            </form>
           </div>
+
         </div>
-        <br />
-{/*         <Form.Group className="mb-3" controlId="curso">
-          <Form.Label>Codigo del curso</Form.Label>
-          <Form.Control
-            type="text"
-            ref={post_curso}
-            placeholder="Introduzca el codigo del curso"
-          />
-        </Form.Group> */}
-
-        {/* CODIGO DE BARRA */}
-        <Form.Group className="mb-3" controlId="codigoBarra">
-          <Form.Label>Codigo de barra</Form.Label>
-          <Form.Control
-            type="text"
-            // ref={post_codigoBarra}
-            placeholder="Introduzca el codigo de barra"
-          />
-        </Form.Group>
-
-        {/* BOTON */}
-        <Button variant="primary" onClick={() => {
-          alert("funciona")
-        }} className="w-100">
-          Crear participante
-        </Button>
-      </Form>
-
-    </div>
-    </Card>
+      </Card>
     </>
   )
 }
