@@ -11,20 +11,20 @@ const Login = () => {
             <div className="avatar">
               <img src={image} />
             </div>
-            <h2>Login</h2>
-            <h3>Welcome back Kelly</h3>
+            <h2>Usuario existente</h2>
+            <h3>Bienvenid@ de vuelta</h3>
 
             <form className="login-form">
               <div className="textbox">
-                <input type="email" placeholder="Username" />
+                <input type="email" placeholder="Nombre de Usuario" />
                 <span className="material-symbols-outlined">  </span>
               </div>
               <div className="textbox">
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Contraseña" />
                 <span className="material-symbols-outlined">  </span>
               </div>
-              <button type="submit">LOGIN</button>
-              <a href="#">Forgot your credentials?</a>
+              <button type="submit">Entrar</button>
+              <a href="#">Olvidaste tus credenciales?</a>
             </form>
           </div>
 
