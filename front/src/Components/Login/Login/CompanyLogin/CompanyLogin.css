@@ -15,16 +15,17 @@ body,
 }
 
 body {
-  /* display: grid;
+  /*display: grid;
   place-items: center;
   margin: 0;
-  padding: 0 24px; */
-  background-image: url("bg.svg");
+  padding: 0 24px;
+  */background-image: url("bg.svg");
   background-size: 2000px 1000px;
   background-position: -500px 0;
   color: #f9f9f9;
   font-family: "Euclid Circular A";
   animation: gradient 10s infinite alternate linear;
+  -webkit-animation: gradient 10s infinite alternate linear;
 }
 
 @media (width >= 500px) {

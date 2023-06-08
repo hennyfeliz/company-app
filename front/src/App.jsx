@@ -9,9 +9,7 @@ function App() {
     <>
       <Navbar />
       <div className="container">
-        <h1 className='d-2'>
           <Principal />
-        </h1>
       </div>
       <div className="footer fixed-bottom">
         <Footer />
