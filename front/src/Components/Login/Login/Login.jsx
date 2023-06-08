@@ -1,6 +1,7 @@
 import { Card } from "react-bootstrap";
 import "./Login.css"
 import image from "./avatar.png"
+import { Button } from "react-bootstrap";
 
 const Login = () => {
   return (
@@ -25,10 +26,16 @@ const Login = () => {
               </div>
               <button type="submit">Entrar</button>
               <a href="#">Olvidaste tus credenciales?</a>
+              <Button bsStyle="success" onClick={() => {
+                alert("funciona")
+              }} className="w-50">
+                Registrarte
+              </Button>
             </form>
           </div>
 
         </div>
+
       </Card>
     </>
   )
