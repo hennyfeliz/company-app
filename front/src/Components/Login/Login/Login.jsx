@@ -18,9 +18,19 @@ const Login = () => {
             <div className="avatar">
               <img src={image} />
             </div>
-            <h2>Usuario existente</h2>
-            <h3>Bienvenid@ de vuelta</h3>
-
+            {
+              login
+                ?
+                <div>
+                  <h2>Usuario existente</h2>
+                  <h3>Bienvenid@ de vuelta</h3>
+                </div>
+                :
+                <div>
+                  <h2>Nuevo usuario</h2>
+                  <h3>Bienvenido por primera vez</h3>
+                </div>
+            }
             <form className="login-form">
               <div className="textbox">
                 <input type="email" placeholder="Nombre de Usuario" />
