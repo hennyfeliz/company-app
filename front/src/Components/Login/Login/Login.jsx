@@ -1,9 +1,15 @@
 import { Card } from "react-bootstrap";
 import "./Login.css"
 import image from "./avatar.png"
-import { Button } from "react-bootstrap";
+import { useState } from "react";
 
 const Login = () => {
+  const [login, setLogin] = useState(0);
+
+  const HandlerLogin = () => {
+    setLogin(!login);
+  }
+
   return (
     <>
       <Card classNameName="m-5">
@@ -26,11 +32,9 @@ const Login = () => {
               </div>
               <button type="submit">Entrar</button>
               <a href="#">Olvidaste tus credenciales?</a>
-              <Button bsStyle="success" onClick={() => {
-                alert("funciona")
-              }} className="w-50">
-                Registrarte
-              </Button>
+              {login
+                ? <button type="button" className="w-50 h-100 btn btn-default" onClick={HandlerLogin}>Registrar</button>
+                : <button type="button" className="w-50 h-100 btn btn-default" onClick={HandlerLogin}>Logear</button>}
             </form>
           </div>
 

@@ -146,3 +146,18 @@ body {
   text-align: left;
   text-decoration: none;
 }
+
+.change_reg_log{
+  justify-content: right;
+  padding: 10px;
+  border-radius: 100%;
+  background-color: #1d4066;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+.span-registrar{
+  text-justify: right;
+}
