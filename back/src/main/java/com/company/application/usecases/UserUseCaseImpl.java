@@ -25,6 +25,11 @@ public class UserUseCaseImpl implements UserUseCase {
   }
 
   @Override
+  public Optional<User> getUserByEmail(String email) {
+    return userRepositoryPort.findByEmail(email);
+  }
+
+  @Override
   public List<User> getAllUser() {
     return userRepositoryPort.findAll();
   }

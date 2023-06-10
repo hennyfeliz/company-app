@@ -24,6 +24,11 @@ public class UserService implements UserUseCase {
   }
 
   @Override
+  public Optional<User> getUserByEmail(String email) {
+    return userUseCase.getUserByEmail(email);
+  }
+
+  @Override
   public List<User> getAllUser() {
     return userUseCase.getAllUser();
   }
