@@ -36,14 +36,14 @@ public class EmployeeController {
     return new ResponseEntity<>(createdEmployee, HttpStatus.CREATED);
   }
 
-  @PutMapping("/")
+  @PutMapping("/{id}")
   public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee employee){
     return employeeService.updateEmployee(id, employee)
             .map(employeen -> new ResponseEntity<>(employeen, HttpStatus.OK))
             .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
   }
 
-  @DeleteMapping("/")
+  @DeleteMapping("/{id}")
   public ResponseEntity<String> deleteEmployee(@PathVariable Long id){
     if(employeeService.deleteEmployee(id)){
       return ResponseEntity.ok("Employee deleted");

@@ -1,23 +1,11 @@
 package com.company.infraestructure.config;
 
-import com.company.application.services.CompanyService;
-import com.company.application.services.EmployeeService;
-import com.company.application.services.PositionService;
-import com.company.application.services.TeamService;
-import com.company.application.usecases.CompanyUseCasesImpl;
-import com.company.application.usecases.EmployeUseCaseImpl;
-import com.company.application.usecases.PositionUseCaseImpl;
-import com.company.application.usecases.TeamUseCaseImpl;
+import com.company.application.services.*;
+import com.company.application.usecases.*;
 import com.company.domain.model.Team;
-import com.company.domain.ports.out.CompanyRepositoryPort;
-import com.company.domain.ports.out.EmployeeRepositoryPort;
-import com.company.domain.ports.out.PositionReporitoryPort;
-import com.company.domain.ports.out.TeamRepositoryPort;
+import com.company.domain.ports.out.*;
 import com.company.infraestructure.adapters.SomeExternalService;
-import com.company.infraestructure.repositories.Impl.JpaCompanyRepositoryAdapter;
-import com.company.infraestructure.repositories.Impl.JpaEmployeeRepositoryAdapter;
-import com.company.infraestructure.repositories.Impl.JpaPositionRepositoryAdapter;
-import com.company.infraestructure.repositories.Impl.JpaTeamRepositoryAdapter;
+import com.company.infraestructure.repositories.Impl.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -70,6 +58,17 @@ public class ApplicationConfig {
     return jpaTeamRepositoryAdapter;
   }
 
+  // User
+
+  @Bean
+  public UserService userService(UserRepositoryPort userRepositoryPort){
+    return new UserService(new UserUseCaseImpl(userRepositoryPort));
+  }
+
+  @Bean
+  public UserRepositoryPort userRepositoryPort(JpaUserRepositoryAdapter jpaUserRepositoryAdapter){
+    return jpaUserRepositoryAdapter;
+  }
 
   // SomeExternalServices
 
