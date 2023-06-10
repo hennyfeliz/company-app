@@ -4,6 +4,8 @@ import com.company.domain.model.User;
 import com.company.domain.ports.out.UserRepositoryPort;
 import com.company.infraestructure.entities.UserEntity;
 import com.company.infraestructure.repositories.JpaUserRepository;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -32,7 +34,10 @@ public class JpaUserRepositoryAdapter implements UserRepositoryPort {
 
   @Override
   public List<User> findAll() {
-    return jpaUserRepository.findAll().stream().map(UserEntity::toDomainModel).collect(Collectors.toList());
+    return jpaUserRepository.findAll()
+            .stream()
+            .map(UserEntity::toDomainModel)
+            .collect(Collectors.toList());
   }
 
   @Override

@@ -2,33 +2,34 @@ package com.company.infraestructure.entities;
 
 import com.company.domain.model.User;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "User")
+@Table(name = "[user]")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 public class UserEntity {
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.AUTO)
   @Id
   @Column(name = "id")
   private Long id;
 
-  @Column
+  @Column(name = "email")
   private String email;
 
-  @Column
+  @Column(name = "password")
   private String password;
 
-  @Column
+  @Column(name = "username")
   private String username;
 
-  @Column
+  @Column(name = "Employee")
   private int employee;
 
   public static UserEntity fromDomainModel(User user){
