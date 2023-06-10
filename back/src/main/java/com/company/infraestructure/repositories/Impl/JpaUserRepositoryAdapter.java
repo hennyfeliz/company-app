@@ -33,6 +33,11 @@ public class JpaUserRepositoryAdapter implements UserRepositoryPort {
   }
 
   @Override
+  public Optional<User> findByEmail(String email) {
+    return jpaUserRepository.findByEmail(email);
+  }
+
+  @Override
   public List<User> findAll() {
     return jpaUserRepository.findAll()
             .stream()

@@ -31,6 +31,13 @@ public class UserController {
             .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
   }
 
+  @GetMapping("/email/{email}")
+  public ResponseEntity<User> getUserByEmail(@PathVariable String email){
+    return userService.getUserByEmail(email)
+            .map(user -> new ResponseEntity<>(user, HttpStatus.OK))
+            .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+  }
+
   @PostMapping("/")
   public ResponseEntity<User> createUser(@RequestBody User user){
     User createdUser = userService.createUser(user);
