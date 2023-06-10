@@ -1,13 +1,23 @@
 import { Card } from "react-bootstrap";
 import "./Login.css"
 import image from "./avatar.png"
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { validateUserExists } from "./ValidationMethods/ValidatedUserExists";
 
 const Login = () => {
   const [login, setLogin] = useState(0);
 
+  const email = useRef("");
+  const password = useRef("");
+
   const HandlerLogin = () => {
     setLogin(!login);
+  }
+
+  const validateUserHandler = (event) => {
+    event.preventDefault();
+    console.log(email.current.value, password.current.value)
+    validateUserExists(email.current.value, password.current.value)
   }
 
   return (
@@ -33,14 +43,14 @@ const Login = () => {
             }
             <form className="login-form">
               <div className="textbox">
-                <input type="email" placeholder="Nombre de Usuario" />
+                <input type="email" placeholder="Nombre de Usuario" ref={email} />
                 <span className="material-symbols-outlined">  </span>
               </div>
               <div className="textbox">
-                <input type="password" placeholder="Contraseña" />
+                <input type="password" placeholder="Contraseña" ref={password} />
                 <span className="material-symbols-outlined">  </span>
               </div>
-              <button type="submit">Entrar</button>
+              <button type="submit" onClick={validateUserHandler}>Entrar</button>
               <a href="#">Olvidaste tus credenciales?</a>
               {login
                 ? <button type="button" className="w-50 h-100 btn btn-default" onClick={HandlerLogin}>Registrar</button>
