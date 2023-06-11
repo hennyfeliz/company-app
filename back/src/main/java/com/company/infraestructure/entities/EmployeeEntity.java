@@ -47,11 +47,16 @@ public class EmployeeEntity {
   @JoinColumn(name = "team")
   private TeamEntity team;
 
+  @JsonIgnore
+  @OneToOne
+  @JoinColumn(name = "userr")
+  private UserEntity user;
+
   public static EmployeeEntity fromDomainModel(Employee employee){
-    return new EmployeeEntity(employee.getId(), employee.getEmployeeName(), employee.getEmployeeLastname(), employee.getCompany(),employee.getContratationDate(), employee.getPosition(), employee.getTeam());
+    return new EmployeeEntity(employee.getId(), employee.getEmployeeName(), employee.getEmployeeLastname(), employee.getCompany(),employee.getContratationDate(), employee.getPosition(), employee.getTeam(), employee.getUser());
   }
 
   public Employee toDomainModel(){
-    return new Employee(id, employeeName, employeeLastname, company,contratationDate, position, team);
+    return new Employee(id, employeeName, employeeLastname, company,contratationDate, position, team, user);
   }
 }

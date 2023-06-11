@@ -1,13 +1,15 @@
 package com.company.domain.model;
 
+import com.company.infraestructure.entities.EmployeeEntity;
+
 public class User {
   private Long id;
   private String username;
   private String email;
   private String password;
-  private int employee;
+  private EmployeeEntity employee;
 
-  public User(Long id, String username, String email, String password, int employee) {
+  public User(Long id, String username, String email, String password, EmployeeEntity employee) {
     this.id = id;
     this.username = username;
     this.email = email;
@@ -47,11 +49,11 @@ public class User {
     this.password = password;
   }
 
-  public int getEmployee() {
+  public EmployeeEntity getEmployee() {
     return employee;
   }
 
-  public void setEmployee(int employee) {
+  public void setEmployee(EmployeeEntity employee) {
     this.employee = employee;
   }
 }

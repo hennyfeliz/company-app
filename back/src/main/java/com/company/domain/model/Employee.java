@@ -3,6 +3,7 @@ package com.company.domain.model;
 import com.company.infraestructure.entities.CompanyEntity;
 import com.company.infraestructure.entities.PositionEntity;
 import com.company.infraestructure.entities.TeamEntity;
+import com.company.infraestructure.entities.UserEntity;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -15,8 +16,9 @@ public class Employee {
   private LocalDateTime contratationDate;
   private PositionEntity position;
   private TeamEntity team;
+  private UserEntity user;
 
-  public Employee(Long id, String employeeName, String employeeLastname, CompanyEntity company, LocalDateTime contratationDate, PositionEntity position, TeamEntity team) {
+  public Employee(Long id, String employeeName, String employeeLastname, CompanyEntity company, LocalDateTime contratationDate, PositionEntity position, TeamEntity team, UserEntity user) {
     this.id = id;
     this.employeeName = employeeName;
     this.employeeLastname = employeeLastname;
@@ -24,6 +26,7 @@ public class Employee {
     this.contratationDate = contratationDate;
     this.position = position;
     this.team = team;
+    this.user = user;
   }
 
   public Long getId() {
@@ -80,5 +83,13 @@ public class Employee {
 
   public void setTeam(TeamEntity team) {
     this.team = team;
+  }
+
+  public UserEntity getUser() {
+    return user;
+  }
+
+  public void setUser(UserEntity user) {
+    this.user = user;
   }
 }

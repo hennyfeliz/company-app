@@ -1,6 +1,7 @@
 package com.company.infraestructure.entities;
 
 import com.company.domain.model.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -9,7 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "[user]")
+@Table(name = "userr")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -29,8 +30,10 @@ public class UserEntity {
   @Column(name = "username")
   private String username;
 
-  @Column(name = "Employee")
-  private int employee;
+  @JsonIgnore
+  @OneToOne
+  @JoinColumn(name = "employee")
+  private EmployeeEntity employee;
 
   public static UserEntity fromDomainModel(User user){
     return new UserEntity(user.getId(), user.getEmail(), user.getPassword(), user.getUsername(), user.getEmployee());
