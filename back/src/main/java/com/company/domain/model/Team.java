@@ -1,11 +1,15 @@
 package com.company.domain.model;
 
+import com.company.infraestructure.entities.EmployeeEntity;
+
+import java.util.List;
+
 public class Team {
   private Long id;
   private String teamName;
-  private int employee;
+  private List<EmployeeEntity> employee;
 
-  public Team(Long id, String teamName, int employee) {
+  public Team(Long id, String teamName, List<EmployeeEntity> employee) {
     this.id = id;
     this.teamName = teamName;
     this.employee = employee;
@@ -27,11 +31,11 @@ public class Team {
     this.teamName = teamName;
   }
 
-  public int getEmployee() {
+  public List<EmployeeEntity> getEmployee() {
     return employee;
   }
 
-  public void setEmployee(int employee) {
+  public void setEmployee(List<EmployeeEntity> employee) {
     this.employee = employee;
   }
 }

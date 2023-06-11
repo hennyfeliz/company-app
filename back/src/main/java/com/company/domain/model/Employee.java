@@ -1,6 +1,8 @@
 package com.company.domain.model;
 
 import com.company.infraestructure.entities.CompanyEntity;
+import com.company.infraestructure.entities.PositionEntity;
+import com.company.infraestructure.entities.TeamEntity;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -11,10 +13,10 @@ public class Employee {
   private String employeeLastname;
   private CompanyEntity company;
   private LocalDateTime contratationDate;
-  private int position;
-  private int team;
+  private PositionEntity position;
+  private TeamEntity team;
 
-  public Employee(Long id, String employeeName, String employeeLastname, CompanyEntity company, LocalDateTime contratationDate, int position, int team) {
+  public Employee(Long id, String employeeName, String employeeLastname, CompanyEntity company, LocalDateTime contratationDate, PositionEntity position, TeamEntity team) {
     this.id = id;
     this.employeeName = employeeName;
     this.employeeLastname = employeeLastname;
@@ -64,19 +66,19 @@ public class Employee {
     this.contratationDate = contratationDate;
   }
 
-  public int getPosition() {
+  public PositionEntity getPosition() {
     return position;
   }
 
-  public void setPosition(int position) {
+  public void setPosition(PositionEntity position) {
     this.position = position;
   }
 
-  public int getTeam() {
+  public TeamEntity getTeam() {
     return team;
   }
 
-  public void setTeam(int team) {
+  public void setTeam(TeamEntity team) {
     this.team = team;
   }
 }

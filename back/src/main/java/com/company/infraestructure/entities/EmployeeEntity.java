@@ -37,8 +37,15 @@ public class EmployeeEntity {
   @Column(name = "contratation_date")
   private LocalDateTime contratationDate;
 
-  private int position;
-  private int team;
+  @JsonIgnore
+  @ManyToOne
+  @JoinColumn(name = "position")
+  private PositionEntity position;
+
+  @JsonIgnore
+  @ManyToOne
+  @JoinColumn(name = "team")
+  private TeamEntity team;
 
   public static EmployeeEntity fromDomainModel(Employee employee){
     return new EmployeeEntity(employee.getId(), employee.getEmployeeName(), employee.getEmployeeLastname(), employee.getCompany(),employee.getContratationDate(), employee.getPosition(), employee.getTeam());
