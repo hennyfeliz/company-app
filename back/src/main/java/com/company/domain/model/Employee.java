@@ -1,5 +1,7 @@
 package com.company.domain.model;
 
+import com.company.infraestructure.entities.CompanyEntity;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -7,14 +9,16 @@ public class Employee {
   private Long id;
   private String employeeName;
   private String employeeLastname;
+  private CompanyEntity company;
   private LocalDateTime contratationDate;
   private int position;
   private int team;
 
-  public Employee(Long id, String employeeName, String employeeLastname, LocalDateTime contratationDate, int position, int team) {
+  public Employee(Long id, String employeeName, String employeeLastname, CompanyEntity company, LocalDateTime contratationDate, int position, int team) {
     this.id = id;
     this.employeeName = employeeName;
     this.employeeLastname = employeeLastname;
+    this.company = company;
     this.contratationDate = contratationDate;
     this.position = position;
     this.team = team;
@@ -42,6 +46,14 @@ public class Employee {
 
   public void setEmployeeLastname(String employeeLastname) {
     this.employeeLastname = employeeLastname;
+  }
+
+  public CompanyEntity getCompany() {
+    return company;
+  }
+
+  public void setCompany(CompanyEntity company) {
+    this.company = company;
   }
 
   public LocalDateTime getContratationDate() {

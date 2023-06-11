@@ -1,18 +1,24 @@
 package com.company.domain.model;
 
+import com.company.infraestructure.entities.EmployeeEntity;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.OneToMany;
+
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class Company {
   private Long id;
   private String companyName;
   private LocalDateTime creationDate;
-  private String employee;
+  private List<EmployeeEntity> employee;
 
-  public Company(Long id, String companyName, LocalDateTime creationDate, String employee) {
+
+  public Company(Long id, String companyName, LocalDateTime creationDate, List<EmployeeEntity> employees) {
     this.id = id;
     this.companyName = companyName;
     this.creationDate = creationDate;
-    this.employee = employee;
+    this.employee = employees;
   }
 
   public Long getId() {
@@ -39,11 +45,11 @@ public class Company {
     this.creationDate = creationDate;
   }
 
-  public String getEmployee() {
+  public List<EmployeeEntity> getEmployee() {
     return employee;
   }
 
-  public void setEmployee(String employee) {
+  public void setEmployee(List<EmployeeEntity>  employee) {
     this.employee = employee;
   }
 }

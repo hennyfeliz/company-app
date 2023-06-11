@@ -1,6 +1,7 @@
 package com.company.infraestructure.entities;
 
 import com.company.domain.model.Employee;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,6 +29,11 @@ public class EmployeeEntity {
   @Column(name = "employee_lastname")
   private String employeeLastname;
 
+  @JsonIgnore
+  @ManyToOne
+  @JoinColumn(name = "company")
+  private CompanyEntity company;
+
   @Column(name = "contratation_date")
   private LocalDateTime contratationDate;
 
@@ -35,10 +41,10 @@ public class EmployeeEntity {
   private int team;
 
   public static EmployeeEntity fromDomainModel(Employee employee){
-    return new EmployeeEntity(employee.getId(), employee.getEmployeeName(), employee.getEmployeeLastname(), employee.getContratationDate(), employee.getPosition(), employee.getTeam());
+    return new EmployeeEntity(employee.getId(), employee.getEmployeeName(), employee.getEmployeeLastname(), employee.getCompany(),employee.getContratationDate(), employee.getPosition(), employee.getTeam());
   }
 
   public Employee toDomainModel(){
-    return new Employee(id, employeeName, employeeLastname, contratationDate, position, team);
+    return new Employee(id, employeeName, employeeLastname, company,contratationDate, position, team);
   }
 }

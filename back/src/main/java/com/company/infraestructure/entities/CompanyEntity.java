@@ -1,6 +1,7 @@
 package com.company.infraestructure.entities;
 
 import com.company.domain.model.Company;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "company_")
@@ -29,8 +31,9 @@ public class CompanyEntity {
   @Column(name = "creation_date")
   private LocalDateTime creationDate;
 
-  @Column(length = 50)
-  private String employee;
+  @JsonIgnore
+  @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
+  private List<EmployeeEntity> employee;
 
   public static CompanyEntity fromDomainModel(Company company){
     return new CompanyEntity(company.getId(), company.getCompanyName(), company.getCreationDate(), company.getEmployee());
