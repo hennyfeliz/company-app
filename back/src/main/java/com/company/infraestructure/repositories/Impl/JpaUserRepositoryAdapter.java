@@ -63,4 +63,9 @@ public class JpaUserRepositoryAdapter implements UserRepositoryPort {
     }
     return false;
   }
+
+  @Override
+  public Optional<User> validateEmailAndPassword(String email, String password) {
+    return jpaUserRepository.existsByEmailAndPassword(email, password).map(UserEntity::toDomainModel);
+  }
 }
