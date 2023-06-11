@@ -9,7 +9,7 @@ public class User {
   private String password;
   private EmployeeEntity employee;
 
-  public User(Long id, String username, String email, String password, EmployeeEntity employee) {
+  public User(Long id, String email, String password, String username, EmployeeEntity employee) {
     this.id = id;
     this.username = username;
     this.email = email;
