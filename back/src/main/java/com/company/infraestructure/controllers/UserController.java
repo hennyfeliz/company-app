@@ -44,6 +44,13 @@ public class UserController {
     return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
   }
 
+  @GetMapping("/validate")
+  public ResponseEntity<User> validateEmailAndPassword(@RequestBody User user){
+    return userService.validateEmailAndPassword(user.getEmail(), user.getPassword())
+            .map(userr -> new ResponseEntity<>(userr, HttpStatus.OK))
+            .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+  }
+
   @PutMapping("/{id}")
   public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user){
     return userService.updateUser(id, user)

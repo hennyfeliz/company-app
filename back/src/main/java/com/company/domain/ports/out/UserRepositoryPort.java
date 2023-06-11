@@ -12,4 +12,5 @@ public interface UserRepositoryPort {
   List<User> findAll();
   Optional<User> update(User user);
   boolean deleteById(Long id);
+  Optional<User>  validateEmailAndPassword(String email, String password);
 }

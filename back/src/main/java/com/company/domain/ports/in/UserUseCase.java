@@ -12,4 +12,5 @@ public interface UserUseCase {
   List<User> getAllUser();
   Optional<User> updateUser(Long id, User user);
   boolean deleteUser(Long id);
+  Optional<User>  validateEmailAndPassword(String email, String password);
 }
