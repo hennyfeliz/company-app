@@ -42,4 +42,9 @@ public class UserService implements UserUseCase {
   public boolean deleteUser(Long id) {
     return userUseCase.deleteUser(id);
   }
+
+  @Override
+  public Optional<User>  validateEmailAndPassword(String email, String password) {
+    return userUseCase.validateEmailAndPassword(email, password);
+  }
 }

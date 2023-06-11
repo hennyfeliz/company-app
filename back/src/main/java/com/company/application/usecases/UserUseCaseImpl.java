@@ -43,4 +43,9 @@ public class UserUseCaseImpl implements UserUseCase {
   public boolean deleteUser(Long id) {
     return userRepositoryPort.deleteById(id);
   }
+
+  @Override
+  public Optional<User> validateEmailAndPassword(String email, String password) {
+    return userRepositoryPort.validateEmailAndPassword(email, password);
+  }
 }
