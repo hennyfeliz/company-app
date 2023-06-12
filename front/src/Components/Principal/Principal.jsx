@@ -119,15 +119,22 @@ const Principal = () => {
         </div>
         <div className="principal_content">
           <div className="banner">
-
+            <div className="banner_info">
+              <h3>Nombre</h3>
+            </div>
           </div>
           <div className="principal_content_icon">
             <span className="user_icon_principal">
               <ion-icon name="person-circle-outline"></ion-icon>
             </span>
           </div>
-          <div className="principal_content_info">
+          <div className="principal_content_info flex d-flex">
+            <div className="company_people">
 
+            </div>
+            <div className="company_info">
+
+            </div>
           </div>
           {/* <h1>Hola</h1> */}
         </div>
