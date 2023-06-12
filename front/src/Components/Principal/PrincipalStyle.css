@@ -38,5 +38,63 @@
 }
 
 .principal_content{
-  border: 1px solid red;
+  margin: 7px;
+  width: 900px;
+  height: 770px;
+  /* position: relative; */
+  border: 1px solid white;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.banner{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: auto;
+  height: 10px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 40px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+
+.principal_content_info{
+  /* margin: 20px; */
+  margin-top: 7px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: auto;
+  height: 645px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 40px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.principal_content_icon{
+  position: absolute;
+  top: 22%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+    /* Añade un índice z para que se superponga  Resto de las propiedades CSS:; */
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.user_icon_principal{
+  font-size: 120px;
 }
