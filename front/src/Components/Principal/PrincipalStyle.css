@@ -2,11 +2,17 @@
 
 
 .left_side{
-  /* border border-danger col-3 p-4 h-full */
-  margin-top: 10px;
-  /* border: 1px solid red; */
-  width: 300px;
+  /*borderborder-dangercol-3p-4h-full*/margin-top: 10px;
+  /*border: 1px solid red; */
+  width: 400px;
   height: 770px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 40px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
 
 .title_element{
@@ -31,4 +37,6 @@
   margin: 20px;
 }
 
-
+.principal_content{
+  border: 1px solid red;
+}

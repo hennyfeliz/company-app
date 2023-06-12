@@ -1,6 +1,7 @@
 // import LoginRegisterBodyComponent from "../Login/LoginRegisterBodyComponent"
 
 // import Login from "../Login/Login/Login"
+import { Container } from "react-bootstrap"
 import "./PrincipalStyle.css"
 
 
@@ -86,6 +87,7 @@ const Principal = () => {
     <>
       {/* <LoginRegisterBodyComponent /> */}
       {/* <Login /> */}
+      <Container className="flex flex-column">
       <div className="left_side">
         <div className="title_element">
           <h3 className="title">Personas a contratar</h3>
@@ -115,6 +117,10 @@ const Principal = () => {
         }
 
       </div>
+      <div className="principal_content">
+        <h1>Hola</h1>
+      </div>
+      </Container>
     </>
   )
 }
