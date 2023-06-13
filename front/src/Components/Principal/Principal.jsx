@@ -80,6 +80,54 @@ const Principal = () => {
         password: "darling",
         username: "darling"
       }
+    }, {
+      id: 1,
+      employeeName: "albert",
+      employeeLastname: "feliz",
+      company: {
+        id: 3,
+        companyName: "cocacola",
+        creationDate: "2020-01-01T00:00:00"
+      },
+      contratationDate: "2020-01-01T00:00:00",
+      position: {
+        id: 2,
+        positionName: "dev"
+      },
+      team: {
+        id: 2,
+        teamName: "bcc"
+      },
+      user: {
+        id: 4,
+        email: "darling@gmail.com",
+        password: "darling",
+        username: "darling"
+      }
+    }, {
+      id: 1,
+      employeeName: "albert",
+      employeeLastname: "feliz",
+      company: {
+        id: 3,
+        companyName: "cocacola",
+        creationDate: "2020-01-01T00:00:00"
+      },
+      contratationDate: "2020-01-01T00:00:00",
+      position: {
+        id: 2,
+        positionName: "dev"
+      },
+      team: {
+        id: 2,
+        teamName: "bcc"
+      },
+      user: {
+        id: 4,
+        email: "darling@gmail.com",
+        password: "darling",
+        username: "darling"
+      }
     },
   ]
 
@@ -129,8 +177,27 @@ const Principal = () => {
             </span>
           </div>
           <div className="principal_content_info flex d-flex">
-            <div className="company_people">
-
+            <div className="company_people p-3">
+              <div className="p-3">
+                <span>Compañeros de la empresa</span>
+              </div>
+              {
+                elements.map((element) => {
+                  return (
+                    <>
+                      <div className="elements">
+                        <span className="user_icon">
+                          <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <div className="titles">
+                          <span className="name">{`${element.employeeName} ${element.employeeLastname}`}</span>
+                        </div>
+                      </div>
+                      <hr />
+                    </>
+                  )
+                })
+              }
             </div>
             <div className="company_info">
 

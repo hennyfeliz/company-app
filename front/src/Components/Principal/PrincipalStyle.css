@@ -25,7 +25,6 @@
 
 .elements{
   /* border: 1px solid red; */
-  padding: 7px;
   display: flex;
   align-content: center;
   align-items: center;
@@ -107,13 +106,13 @@
 .company_people{
   border: 1px solid white;
   margin-top: 30px;
-  width: 200px;
+  width: 240px;
   height: 550px;
 }
 
 .company_info{
   border: 1px solid white;
   margin-left: 20px;
-  width: 520px;
+  width: 480px;
   height: 579px;
 }
