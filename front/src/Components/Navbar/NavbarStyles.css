@@ -5,3 +5,11 @@
   font-size: 2rem;
   margin-left: 20px;
 }
+
+.dropdown-content {
+  display: none;
+}
+
+.user_icon:hover .dropdown-content {
+  display: block;
+}
