@@ -1,5 +1,5 @@
 
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import "./NavbarStyles.css"
 
 const Navbar = () => {
@@ -12,19 +12,39 @@ const Navbar = () => {
         <div className="top-buttons collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to={"/company"}>
-                <a className="nav-link active">Company</a>
-              </Link>
+              <div>
+                <div className="nav-item dropdown">
+                  <a className="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a>Company</a>
+                  </a>
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <Link to={"/company"}>
+                      <li><a className="dropdown-item" href="#">Action</a></li>
+                    </Link>
+                    <li><a className="dropdown-item" href="#">Another action</a></li>
+                    <li><hr className="dropdown-divider" /></li>
+                    <li><a className="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
             <li className="nav-item">
-              <Link to={"/employee"}>
-                <a className="nav-link">Employees</a>
-              </Link>
+              <div>
+                <div className="nav-item dropdown">
+                  <a className="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a>Employees</a>
+                  </a>
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <Link to={"/employee"}>
+                      <li><a className="dropdown-item" href="#">Action</a></li>
+                    </Link>
+                    <li><a className="dropdown-item" href="#">Another action</a></li>
+                    <li><hr className="dropdown-divider" /></li>
+                    <li><a className="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
-{/*             
-            <li className="nav-item">
-              <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
-            </li> */}
           </ul>
           <form className="d-flex">
             <div>
