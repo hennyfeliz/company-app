@@ -1,34 +1,33 @@
 
-
+import {Link} from "react-router-dom"
 import "./NavbarStyles.css"
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid container">
-        <a className="navbar-brand" href="#">Manejador de compañias</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className="buttons-space container-fluid container">
+        <Link to={"/"}>
+          <a className="navbar-brand">Manejador de compañias</a>
+        </Link>
+        <div className="top-buttons collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <Link to={"/company"}>
+                <a className="nav-link active">Company</a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Link</a>
+              <Link to={"/employee"}>
+                <a className="nav-link">Employees</a>
+              </Link>
             </li>
-
+{/*             
             <li className="nav-item">
               <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
-            </li>
+            </li> */}
           </ul>
           <form className="d-flex">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <div>
-              {/* <span className="user_icon">
-                <ion-icon name="person-circle-outline"></ion-icon>
-              </span> */}
               <div className="nav-item dropdown">
                 <a className="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <span className="user_icon">

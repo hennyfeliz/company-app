@@ -9,7 +9,13 @@
 .dropdown-content {
   display: none;
 }
-
-.user_icon:hover .dropdown-content {
+/* 
+.nav-link:hover + .drop-1,
+.drop-1:hover {
   display: block;
+} */
+
+a, a:hover{
+  text-decoration: none; 
+  color: inherit;
 }
