@@ -1,7 +1,7 @@
-// import LoginRegisterBodyComponent from "../Login/LoginRegisterBodyComponent"
+import LoginRegisterBodyComponent from "../Login/LoginRegisterBodyComponent"
 
 import Login from "../Login/Login/Login"
-// import PrincipalDashboardCompany from "../Dashboards/PrincipalDashboardCompany"
+import PrincipalDashboardCompany from "../Dashboards/PrincipalDashboardCompany"
 import { Routes, Route } from "react-router-dom"
 import "./PrincipalStyle.css"
 
@@ -14,10 +14,8 @@ const Principal = () => {
     <>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/company_dashboard" element={<Login />} />
-        {/* <LoginRegisterBodyComponent /> */}
-        {/* <Login /> */}
-        {/* <PrincipalDashboardCompany /> */}
+        <Route path="/principal_dashboard_company" element={<PrincipalDashboardCompany />} />
+        <Route path="/login_register_body" element={<LoginRegisterBodyComponent />} />
       </Routes>
     </>
   )
