@@ -1,6 +1,6 @@
 import { Card } from "react-bootstrap";
 import "./CompanyLogin.css"
-import image from "./avatar.png"
+import image from "../avatar.png"
 
 const CompanyLogin = () => {
   return (
